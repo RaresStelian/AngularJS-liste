@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="angular.min.js"></script>	
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="liste.js"></script>
+	
+</head>
+<style>
+		body {background-color: rgb(81,175,175);}
+		p {text-indent: 50px;}
+	</style>
+<body>
+	<div data-ng-app="myApp" data-ng-controller="myCtrl as vm">
+		<br>
+		<input type="text" data-ng-model="vm.valoare">
+		<button ng-click="vm.adaugare()">Adaugati valori</button>
+		<br>
+		<div data-ng-repeat="x in vm.lista track by $index">
+		<p>	{{ x }} 
+			<button ng-click="vm.remove()">stergeti valoarea</button>
+			<br>
+		</p>	
+		</div>
+		<br>
+		<button ng-click="vm.sortare1()">sortare crescator</button>
+		<button ng-click="vm.sortare2()">sortare descrescator</button>
+		<button ng-click="vm.sortare3()">sortare alfabeica</button>
+		<button ng-click="vm.sortare4()">sortare alfabeica inversa</button>
+		<button ng-click="vm.sortare5()">sortare aleatoare</button>
+		<button ng-click="vm.sortare7()">afisati valaorea minima</button>
+		<button ng-click="vm.remove()">stergeti elementul</button>
+			
+		
+		
+	</div>
+</body>
+</html>
